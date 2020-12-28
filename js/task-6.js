@@ -1,9 +1,15 @@
-// while (userInput != null) {
-//     let sum;
-//     let userInput;
-//     userInput = prompt('Введите число');
-//     userInput = Number(userInput);
-//     sum = userInput;
-//     console.log(userInput);
-//     console.log(sum);
-// }
+'use strict'
+let total = 0;
+while(true) {
+    let input = prompt('введите число');
+    if (input === null) {
+        alert(`Общая сумма чисел равна ${total}`);
+        break;
+    }    
+    input = Number(input);
+    if (Number.isNaN(input)) {
+        alert(`Было введено не число, попробуйте еще раз`)
+        continue;
+    }    
+    total += input;
+} 

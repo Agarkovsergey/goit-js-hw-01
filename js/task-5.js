@@ -1,26 +1,27 @@
+'use strict'
 let country = prompt('укажите страну для доставки');
 let credit;
-switch (country) {
-    case 'Китай':
+switch (country.toLowerCase()) {
+    case 'китай':
         credit = 100;
         alert(`Доставка в ${country} будет стоить ${credit} кредитов`);
         break
-    case 'Чили':
+    case 'чили':
         credit = 250;
         alert(`Доставка в ${country} будет стоить ${credit} кредитов`);
         break
-    case 'Австралия':
+    case 'австралия':
         credit = 170;
         alert(`Доставка в ${country} будет стоить ${credit} кредитов`);
         break
-    case 'Индия':
+    case 'индия':
         credit = 80;
         alert(`Доставка в ${country} будет стоить ${credit} кредитов`);
         break
-    case 'Ямайка':
+    case 'ямайка':
         credit = 120;
         alert(`Доставка в ${country} будет стоить ${credit} кредитов`);
         break
     default:
-    alert('В вашей стране доставка не доступна');
+        alert('В вашей стране доставка не доступна');
 }

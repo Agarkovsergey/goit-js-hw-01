@@ -1,9 +1,10 @@
+'use strict'
 let credits = 23580;
 const pricePerDroid = 3000;
 let totalPrice;
-let quantity = Number(prompt("количество дроидов которые пользователь хочет купить"));
-console.log(credits, pricePerDroid, totalPrice, quantity);
+let quantity = prompt("количество дроидов которые пользователь хочет купить");
 if (quantity !== null) {
+    quantity = Number(quantity);
     totalPrice = quantity * pricePerDroid;
     if (totalPrice > credits) {
         console.log('Недостаточно средств на счету!');
